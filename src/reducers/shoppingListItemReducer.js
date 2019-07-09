@@ -1,10 +1,10 @@
 export default function shoppingListItemReducer(state = {
-  items: [], 
+  items: [],
   users: [ 'initial user' ]
 }, action) {
 
   switch(action.type) {
-
+// use state.items.length + 1 below because there is no item 0 (it is at 0 index, but we say 1)
     case 'GET_COUNT_OF_ITEMS':
       return Object.assign({}, state, {
         items: state.items.concat(state.items.length + 1)
