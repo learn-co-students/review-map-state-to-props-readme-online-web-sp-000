@@ -39,3 +39,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(App);
+
+//rendering changes so I can submit 
