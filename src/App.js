@@ -28,14 +28,21 @@ class App extends Component {
             Click to change user count
           </button>
           <p>{this.props.items.length}</p>
+          <p>{this.props.users.length}</p>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+//debugger;
+  // after onClick={() => this.handleOnClickItems()
+  // state.items.length = 1 (sa 0 se povecalo na 1)
+  if (state.items || state.users){    // users dodan
+  return { items: state.items,
+    users: state.users}
+  }
 }
 
 export default connect(mapStateToProps)(App);
+// connect takes NEW STATE and updates this.props.items.length in render()
