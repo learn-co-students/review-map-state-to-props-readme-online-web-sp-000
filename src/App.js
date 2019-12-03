@@ -37,5 +37,11 @@ const mapStateToProps = (state) => {
   debugger;
   return { items: state.items }
 }
+//executed with each change to the stores state
+
+// const vanilla = (milkshake) => {
+//   debugger
+//   return {items: milkshake.items}
+// }
 
 export default connect(mapStateToProps)(App);
