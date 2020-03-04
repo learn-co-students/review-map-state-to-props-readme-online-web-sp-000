@@ -33,9 +33,11 @@ class App extends Component {
   }
 }
 
+/*Alternative to last line
 const vanilla = (milkshake) => {
   debugger;
   return { items: milkshake.items }
 }
 
-export default connect(vanilla)(App);
+export default connect(vanilla)(App);*/
+export default connect( state => ({ items: state.items }) )(App);
