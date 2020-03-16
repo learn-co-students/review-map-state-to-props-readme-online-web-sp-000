@@ -1,21 +1,20 @@
 export default function shoppingListItemReducer(state = {
-  items: [], 
-  users: [ 'initial user' ]
+    items: [],
+    users: [ 'initial user' ]
 }, action) {
 
-  switch(action.type) {
-
+    switch(action.type) {
     case 'GET_COUNT_OF_ITEMS':
-      return Object.assign({}, state, {
-        items: state.items.concat(state.items.length + 1)
-      });
+        return Object.assign({}, state, {
+            items: state.items.concat(state.items.length + 1)
+        });
 
     case 'GET_COUNT_OF_USERS':
-      return Object.assign({}, state, {
-        users: state.users.concat(state.users.length + 1)
-      });
+        return Object.assign({}, state, {
+            users: state.users.concat(state.users.length + 1)
+        });
 
     default:
-      return state;
-  }
+        return state;
+    }
 };
