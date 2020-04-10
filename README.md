@@ -287,4 +287,4 @@ a change of state, and has access to the entire store's state. The `connect()`
 function then takes the return value from the `mapStateToProps()` function and
 adds that return value to the props of the component that is passed through in
 the last parentheses. We call that component a connected component, because that
-component is connected to the store.  
+component is connected to the store..  
