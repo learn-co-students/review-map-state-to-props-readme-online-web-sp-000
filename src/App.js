@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; //Meaning that we want to connect our App component to a slice of the store's state specified in mapStateToProps()
 import './App.css';
 
 
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    //debugger;
     return (
       <div className="App">
           <button onClick={() => this.handleOnClickItems()}>
@@ -34,8 +34,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+  return { items: state.items } //This return value is the value of the props that are added to the App component
 }
-
+ 
 export default connect(mapStateToProps)(App);
