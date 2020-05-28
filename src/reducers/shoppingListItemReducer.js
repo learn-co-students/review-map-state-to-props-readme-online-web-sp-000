@@ -1,21 +1,42 @@
-export default function shoppingListItemReducer(state = {
-  items: [], 
-  users: [ 'initial user' ]
-}, action) {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import './App.css';
 
-  switch(action.type) {
 
-    case 'GET_COUNT_OF_ITEMS':
-      return Object.assign({}, state, {
-        items: state.items.concat(state.items.length + 1)
-      });
+class App extends Component {
 
-    case 'GET_COUNT_OF_USERS':
-      return Object.assign({}, state, {
-        users: state.users.concat(state.users.length + 1)
-      });
-
-    default:
-      return state;
+  handleOnClickItems() {
+    this.props.store.dispatch({
+      type: 'GET_COUNT_OF_ITEMS',
+    });
   }
-};
+
+  handleOnClickUsers() {
+    this.props.store.dispatch({
+      type: 'GET_COUNT_OF_USERS',
+    });
+  }
+
+  render() {
+    // debugger;
+    return (
+      <div className="App">
+          <button onClick={() => this.handleOnClickItems()}>
+            Click to change items count
+            </button>
+          <button onClick={() => this.handleOnClickUsers()}>
+            Click to change user count
+          </button>
+          <p>{this.props.items.length}</p>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  debugger;
+  return { items: state.items }
+}
+
+export default connect(mapStateToProps)(App);
+
