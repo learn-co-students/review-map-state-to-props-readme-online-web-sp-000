@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    debugger;
     return (
       <div className="App">
           <button onClick={() => this.handleOnClickItems()}>
@@ -33,8 +33,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  debugger;
+const mapStateToProps = state => {
   return { items: state.items }
 }
 
