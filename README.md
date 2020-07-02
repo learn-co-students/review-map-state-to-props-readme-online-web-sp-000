@@ -39,7 +39,7 @@ the current codebase, we have the code:
 ```javascript
 // ./src/App.js
 ...
-h
+hg
 connect(mapStateToProps)(App)
 ```
 
