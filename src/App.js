@@ -32,10 +32,9 @@ class App extends Component {
     );
   }
 }
-
-const mapStateToProps = (state) => {
+const vanilla = (milkshake) => {
   debugger;
-  return { items: state.items }
+  return { items: milkshake.items }
 }
-
-export default connect(mapStateToProps)(App);
+ 
+export default connect(vanilla)(App);
