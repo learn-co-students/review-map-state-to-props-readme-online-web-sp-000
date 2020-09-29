@@ -12,7 +12,7 @@ export default function shoppingListItemReducer(state = {
 
     case 'GET_COUNT_OF_USERS':
       return Object.assign({}, state, {
-        users: state.users.concat(state.users.length + 1)
+        users: state.users.concat("state.users.length + 1")
       });
 
     default:
