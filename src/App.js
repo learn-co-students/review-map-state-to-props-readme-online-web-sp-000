@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    debugger;
     return (
       <div className="App">
           <button onClick={() => this.handleOnClickItems()}>
@@ -34,8 +34,11 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
   return { items: state.items }
 }
 
 export default connect(mapStateToProps)(App);
+
+// connect() function used to connect redux part of application to react part of application
+// whatever function is passed as first argument to connect() is called each time there is a change of state & has access to store's this.state
+// connect() function takes return value fr function that is first argument and adds return value to the props of tthe component passed through in the last parentheses aka the "connected component"
