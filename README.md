@@ -1,4 +1,4 @@
-### Introduction
+  ### Introduction
 
 When we last left off, we successfully used our __createStore()__ method, and
 were able have our application re-render through the rather confusing
@@ -182,7 +182,7 @@ const mapStateToProps = (state) => {
 ```
 
 Keeping our debugger in our __App__ component's render function, you can see
-that `this.props.orangePeel` now returns `['a', 'b', 'c']`. So now when we see
+that `this.props.orangePeel` now ret  urns `['a', 'b', 'c']`. So now when we see
 the following code, perhaps we understand it a little better.
 
 ```javascript
