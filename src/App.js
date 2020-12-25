@@ -38,4 +38,4 @@ const mapStateToProps = (state) => {
   return { items: state.items }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(state => ({items: state.items}))(App);
