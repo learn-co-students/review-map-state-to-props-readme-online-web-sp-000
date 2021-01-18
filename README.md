@@ -1,4 +1,4 @@
-### Introduction
+#### Introduction
 
 When we last left off, we successfully used our __createStore()__ method, and
 were able have our application re-render through the rather confusing
