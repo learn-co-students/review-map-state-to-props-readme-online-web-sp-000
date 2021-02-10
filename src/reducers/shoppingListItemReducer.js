@@ -3,7 +3,7 @@ export default function shoppingListItemReducer(state = {
   users: [ 'initial user' ]
 }, action) {
 
-  switch(action.type) {
+  switch(action.type ) {
 
     case 'GET_COUNT_OF_ITEMS':
       return Object.assign({}, state, {
