@@ -38,4 +38,11 @@ const mapStateToProps = (state) => {
   return { items: state.items }
 }
 
+// const vanilla = (milkshake) => {
+//   debugger;
+//   return { items: milkshake.items }
+// }
+ 
+// export default connect(vanilla)(App);
+
 export default connect(mapStateToProps)(App);
