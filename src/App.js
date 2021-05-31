@@ -17,6 +17,8 @@ class App extends Component {
     });
   }
 
+  notes = "taken"
+
   render() {
     // debugger;
     return (
