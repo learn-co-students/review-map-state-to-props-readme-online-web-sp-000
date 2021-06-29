@@ -27,15 +27,17 @@ class App extends Component {
           <button onClick={() => this.handleOnClickUsers()}>
             Click to change user count
           </button>
-          <p>{this.props.items.length}</p>
+          <h1>Items: {this.props.items.length}</h1>
+          <h1>Users: {this.props.users.length}</h1>
+          
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+  // debugger;
+  return { items: state.items, users: state.users }
 }
 
 export default connect(mapStateToProps)(App);
